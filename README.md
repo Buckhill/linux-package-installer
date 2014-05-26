@@ -1,7 +1,5 @@
 ## Linux Package Installer (LPI)
 
-=============================
-
 LPI is a script designed to simplify, automate and speed up the installation of LAMP components (PHP-FPM, Apache, MySQL) within Ubuntu 12.04 LTS+.  
 
 Other distributions (CentOS, Redhat, Debian) are currently being developed for a later release.
