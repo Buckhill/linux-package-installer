@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Linux Package Installer : LPI is a script designed to simplify, automate and speed up the installation of LAMP components (PHP-FPM, Apache, MySQL)" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Linux Package Installer</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Buckhill/linux-package-installer">View on GitHub</a>
+
+          <h1 id="project_title">Linux Package Installer</h1>
+          <h2 id="project_tagline">LPI is a script designed to simplify, automate and speed up the installation of LAMP components (PHP-FPM, Apache, MySQL)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Buckhill/linux-package-installer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Buckhill/linux-package-installer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="linux-package-installer-lpi" class="anchor" href="#linux-package-installer-lpi"><span class="octicon octicon-link"></span></a>Linux Package Installer (LPI)</h2>
+
+<p>LPI is a script designed to simplify, automate and speed up the installation of LAMP components (PHP-FPM, Apache, MySQL) within Ubuntu 12.04 LTS+.  </p>
+
+<p>Other distributions (CentOS, Redhat, Debian) are currently being developed for a later release.</p>
+
+<p>Running LPI without arguments will return help text with available options.</p>
+
+<p>With LPI, you can:-</p>
+
+<ul>
+<li>Install and configure Apache to work with PHP-FPM from within the Ubuntu repository</li>
+<li>Install MySQL Server (The root password is automatically generated and stored in the /root/.my.cnf file)</li>
+<li>Set DotDeb repository for PHP 5.4</li>
+<li>Install PHP-FPM</li>
+<li>Install additional packages, as required (configurable)</li>
+<li>Setup two user groups and automatically configure OpenSSH.  First user group has no SSH access, and second group has only chrooted SFTP access.</li>
+</ul><h3>
+<a name="running-lpi" class="anchor" href="#running-lpi"><span class="octicon octicon-link"></span></a>Running LPI</h3>
+
+<p>To run LPI, first, check the required repositories are enabled (precise-updates/multiverse and precise/multiverse).</p>
+
+<p>Edit: /etc/apt/sources.list and uncomment as required, then run apt-get update</p>
+
+<p>To run LPI, simply execute the .sh script as sudo or root.</p>
+
+<h3>
+<a name="usage-options" class="anchor" href="#usage-options"><span class="octicon octicon-link"></span></a>Usage options</h3>
+
+<p>Usage: ./lpi-core.sh [options...]</p>
+
+<ul>
+<li>-a             Install all. Same as -m -p -w -o curl,unzip,rsync</li>
+<li>-r             Set DotDeb repo for php5.4.</li>
+<li>-p             Install php5-fpm</li>
+<li>-w             Install Apache2</li>
+<li>-o [ progs ]   Install extra packages like curl or unzip delimited with ","</li>
+<li>-m             Install mysql server</li>
+<li>-s PrimaryGroup,SecondaryGroup</li>
+<li>-d             Enable debug logging.</li>
+</ul><h3>
+<a name="limitations" class="anchor" href="#limitations"><span class="octicon octicon-link"></span></a>Limitations</h3>
+
+<ul>
+<li>LPI currently only works on Ubuntu 12.04+ LTS</li>
+<li>LPI cannot uninstall, reinstall or upgrade packages.  If existing packages or files are to be overwritten, LPI will stop with an error</li>
+<li>LPI assumes chroot directory is /home/chroot.  You can change CHROOT variable as required</li>
+</ul><h3>
+<a name="no-guarantees" class="anchor" href="#no-guarantees"><span class="octicon octicon-link"></span></a>No Guarantees</h3>
+
+<p>LPI comes with no guarantees.  Use at your own risk</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Linux Package Installer maintained by <a href="https://github.com/Buckhill">Buckhill</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-46210494-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
