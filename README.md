@@ -42,7 +42,3 @@ Usage: ./lpi-core.sh [options...]
 - LPI currently only works on Ubuntu 12.04+ LTS
 - LPI cannot uninstall, reinstall or upgrade packages.  If existing packages or files are to be overwritten, LPI will stop with an error
 - LPI assumes chroot directory is /home/chroot.  You can change CHROOT variable as required
-
-### No Guarantees
-
-LPI comes with no guarantees.  Use at your own risk
