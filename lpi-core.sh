@@ -248,7 +248,7 @@ function fpm
 
 	apt-get_update
 
- 	apt-get -q=2  -y install php5-cli $FPM_apc php5-common php5-fpm php5-mysqlnd php5-mcrypt
+ 	apt-get -q=2  -y install php5-cli $FPM_apc php5-common php5-fpm php5-mysqlnd php5-mcrypt php5-curl
 	stop_on_error check_file_e /etc/php5/fpm/php.ini
 	sed -i 's/expose_php = On/expose_php = Off/' /etc/php5/fpm/php.ini
 	
